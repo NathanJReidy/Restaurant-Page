@@ -28,7 +28,7 @@ function generateHome() {
 
     // <a href="/order" class="button w-button">
     const aTag = document.createElement('a'); 
-    aTag.setAttribute('href', '/order');
+    aTag.setAttribute('href', '#');
     aTag.classList.add('button');
     aTag.innerText = "Place an Order";
     aTag.style = "text-decoration:none;";
@@ -48,10 +48,6 @@ function generateHome() {
     heroImageWrap.appendChild(heroImage);
 
 
-
-
-    hero-image-wrap
-
 }
 
-generateHome();
+export default generateHome;

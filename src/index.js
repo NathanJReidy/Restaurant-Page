@@ -1,1 +1,4 @@
-//alert(" Hello Nathan! ");
+import generateHome from './generateHome';
+
+// Load page content
+generateHome(); 
