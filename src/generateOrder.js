@@ -1,19 +1,32 @@
 function generateOrder() {
 
-    const heading = document.createElement('h1');
-    h1.classList.add('hero-h1');
-    h1.textContent = "The best burgers in Sydney, delivered to your door in under 30 minutes.";
-    h1.style = "-webkit-transform:translate3d(-25PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-25PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-25PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-25PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0";
-    heroContent.appendChild(h1);
+    const orderPage = document.querySelector('#Main');
 
-    const p = document.createElement('p');
-    p.classList.add('hero-paragraph');
-    p.textContent = "Crispy. Juicy. Freshly grilled.";
-    p.style = "-webkit-transform:translate3d(-25PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-25PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-25PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-25PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0";
-    heroContent.appendChild(p); 
+    const orderBlock = document.createElement('div');
+    const orderTitle = document.createElement('h1');
+    orderTitle.classList.add('hero-h1');
+    orderTitle.textContent = "Food Menu";
+    orderBlock.appendChild(orderTitle);
 
+    function generateFood(name, price) {
 
+        const orderPara = document.createElement('p');
+        orderPara.classList.add('hero-paragraph');
+        orderPara.textContent = `${name}: ${price}`;
+        orderBlock.appendChild(orderPara); 
 
+    }
+
+    generateFood("Tasty Chicken Burger", "$23.50");
+    generateFood("Grilled Steak", "$29.95");
+    generateFood("Crisy Pork Delight", "$14.95");
+    generateFood("Large fries", "$5.95");
+    generateFood("Portugese Chicken Burger", "$19.95");
+    generateFood("Chicken Schnitzel Burger", "$19.95");
+
+    orderPage.appendChild(orderBlock);
 
 
 }
+
+export default generateOrder

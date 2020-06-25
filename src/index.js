@@ -8,21 +8,24 @@ generateHome();
 // Clear home page content
 function clearHome() {
     content.style.display = "none";
+    mainContent.innerHTML = ""; 
 }
 
 const content = document.querySelector('#Header');
+const mainContent = document.querySelector('#Main');
 const homeBtn = document.querySelector('#home-btn');
 const orderBtn = document.querySelector('#order-btn');
 const contactBtn = document.querySelector('#contact-btn');
 
 homeBtn.addEventListener('click', () => {
     clearHome();
-    generateHome();
+    content.style.display = "block";
+    content.style.left = "16%";
 })
 
 orderBtn.addEventListener('click', () => {
     clearHome();
-    //generateMenu();
+    generateOrder();
 })
 
 contactBtn.addEventListener('click', () => {
