@@ -20,7 +20,7 @@ const contactBtn = document.querySelector('#contact-btn');
 homeBtn.addEventListener('click', () => {
     clearHome();
     content.style.display = "block";
-    content.style.left = "5%";
+    //content.style.left = "2%";
 })
 
 orderBtn.addEventListener('click', () => {
